@@ -1,0 +1,25 @@
+﻿<Page
+    x:Class="SlideMachine.Pages.Page1"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:SlideMachine.Pages"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <ScrollViewer Style="{StaticResource PageScrollViewerStyle}">
+            <StackPanel>
+                <TextBlock Text="speech recognizion" Style="{StaticResource TitleTextBlockStyle}" />
+                <TextBlock x:Name="listenText" Text="Can I hear you?" Style="{StaticResource ParagraphTextBlockStyle}" />
+                <StackPanel Orientation="Horizontal"/>
+                <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <Ellipse x:Name="LED" Fill="LightGray" Stroke="White" Width="100" Height="100" Margin="10"/>
+                    <TextBlock x:Name="GpioStatus" Text="Waiting to initialize GPIO..." Margin="10,50,10,10" TextAlignment="Center" FontSize="26.667" />
+                </StackPanel>
+
+            </StackPanel>
+        </ScrollViewer>
+        <MediaElement x:Name="mediaPlayer" AutoPlay="True"/>
+    </Grid>
+</Page>
